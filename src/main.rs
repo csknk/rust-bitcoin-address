@@ -3,22 +3,6 @@ use bitcoin::secp256k1::{rand, Secp256k1};
 use bitcoin::{Address, CompressedPublicKey, Network, PublicKey};
 use std::error::Error;
 
-/// The different types of addresses.
-#[derive(Debug, Clone, Copy, PartialEq, Eq, PartialOrd, Ord, Hash)]
-#[non_exhaustive]
-pub enum AddressType {
-    /// Pay to pubkey hash.
-    P2pkh,
-    /// Pay to script hash.
-    P2sh,
-    /// Pay to witness pubkey hash.
-    P2wpkh,
-    /// Pay to witness script hash.
-    P2wsh,
-    /// Pay to taproot.
-    P2tr,
-}
-
 fn main() {
     gen_new_key();
     let public_key_fixed =
