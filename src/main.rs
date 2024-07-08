@@ -4,7 +4,8 @@ use bitcoin::{Address, CompressedPublicKey, Network, PublicKey};
 use std::error::Error;
 
 fn main() {
-    gen_new_key();
+    /// gen_new_key is just sample code
+    // gen_new_key();
     let public_key_fixed =
         "0279be667ef9dcbbac55a06295ce870b07029bfcdb2dce28d959f2815b16f81798".to_string();
     match p2wpkh_address(&public_key_fixed) {
